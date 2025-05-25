@@ -7,11 +7,11 @@ import random
 import json
 from gtts import gTTS
 
-# -------- Hugging Face API Setup --------
-HF_TOKEN = "hf_your_huggingface_token_here"  # Replace with your token
+
+HF_TOKEN = "hf_your_huggingface_token_here"  
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
-# -------- Classes --------
+
 class ImageCaptioner:
     def __init__(self, image_path):
         self.image_path = image_path
@@ -61,7 +61,7 @@ class VoiceNarrator:
         tts.save(filename)
         return filename
 
-# -------- Streamlit App --------
+
 def main():
     st.set_page_config(page_title="📸 PicTales", layout="centered")
     st.title("📸 PicTales - Turn Any Picture into a Story")
